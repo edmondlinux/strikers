@@ -183,12 +183,12 @@ const ContactPage = () => {
                                                                                 </div> 
                                                                         </div> 
                                                                 </Link>
-                                                                <Link to={`mailto:${contactSettings?.email || "maun5940@gmail.com"}`}>
+                                                                <Link to={`mailto:${contactSettings?.email || "hfvn637909@gmail.com"}`}>
                                                                         <div className="flex items-center space-x-3">
                                                                                 <Mail className="text-red-500" size={18} />
                                                                                 <div>
                                                                                         <p className="text-white font-medium">
-                                                                                                {contactSettings?.email || "maun5940@gmail.com"}
+                                                                                                {contactSettings?.email || "hfvn637909@gmail.com"}
                                                                                         </p>
                                                                                         <p className="text-gray-400 text-sm">Email Us</p>
                                                                                 </div>
