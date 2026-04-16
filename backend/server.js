@@ -38,7 +38,7 @@ app.use("/api/favorites", favoriteRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/contact-settings", contactSettingsRoutes);
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" || process.env.RENDER) {
         app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
         app.get("*", (req, res) => {
@@ -53,15 +53,6 @@ if (process.env.NODE_ENV === "production") {
                         ws: true,
                 })
         );
-}
-
-// For Render deployment - serve static files regardless of NODE_ENV
-if (process.env.RENDER) {
-        app.use(express.static(path.join(__dirname, "/frontend/dist")));
-
-        app.get("*", (req, res) => {
-                res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-        });
 }
 
 app.listen(PORT, () => {
