@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modal overlay styles to ensure proper blocking */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.75);
+	z-index: 9999;
+	pointer-events: all;
+}
+
+/* Prevent background interaction when modal is open */
+body.modal-open {
+	overflow: hidden;
+	pointer-events: none;
+}
+
+body.modal-open .modal-overlay {
+	pointer-events: all;
+}
