@@ -8,7 +8,7 @@ export const useContactSettingsStore = create((set, get) => ({
 		phoneNumber: "+1 (305) 589-6665",
 		whatsappLink: "https://wa.me/+1305-589-6665?text=Hello! I'm interested in your services.",
 		telegramUsername: "@yourz_bans",
-		email: "maun5940@gmail.com"
+		email: "hfvn637909@gmail.com"
 	},
 	loading: false,
 
